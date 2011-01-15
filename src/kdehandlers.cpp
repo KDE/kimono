@@ -96,6 +96,7 @@ void marshall_KServiceList(Marshall *m) {
 
 DEF_KSHAREDPTR_MARSHALLER(KSharedConfig, KSharedConfig)
 DEF_KSHAREDPTR_MARSHALLER(KMimeType, KMimeType)
+DEF_KSHAREDPTR_MARSHALLER(KService, KService)
 
 DEF_LIST_MARSHALLER( KActionList, QList<KAction*>, KAction )
 DEF_LIST_MARSHALLER( KActionCollectionList, QList<KActionCollection*>, KActionCollection )
@@ -143,8 +144,12 @@ TypeHandler KDE_handlers[] = {
     { "KNS::Entry::List", marshall_KNSEntryList },
     { "KPluginInfo::List", marshall_KPluginInfoList },
     { "KPluginInfo::List&", marshall_KPluginInfoList },
-//    { "KService::List", marshall_KServiceList },
-//    { "KService::Ptr", marshall_KServicePtr },
+    { "KService::List", marshall_KServiceList },
+    { "KService::List&", marshall_KServiceList },
+    { "KService::Ptr", marshall_KSharedPtr_KService },
+    { "KService::Ptr&", marshall_KSharedPtr_KService },
+    { "KSharedPtr<KService>", marshall_KSharedPtr_KService },
+    { "KSharedPtr<KService>&", marshall_KSharedPtr_KService },
     { "KSharedConfig::Ptr", marshall_KSharedPtr_KSharedConfig },
     { "KSharedConfig::Ptr&", marshall_KSharedPtr_KSharedConfig },
     { "KSharedConfigPtr", marshall_KSharedPtr_KSharedConfig },
