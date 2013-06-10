@@ -16,6 +16,8 @@ SET(SRC_CS src/AssemblyInfo.cs
  src/Soprano.cs 
 soprano/*.cs)
 
+INCLUDE_DIRECTORIES(${SOPRANO_INCLUDE_DIR})
+
 LINK_DIRECTORIES (${LIBRARY_OUTPUT_PATH})
 ADD_LIBRARY(soprano-sharp SHARED ${SRC_CPP})
 ADD_DEPENDENCIES(soprano-sharp smokesoprano)
