@@ -14,7 +14,7 @@ SET(SRC_CS src/Akonadi.cs
 	src/AssemblyInfo.cs
 	akonadi/*.cs)
 
-include_directories( ${KDE4_INCLUDE_DIR}/akonadi )
+include_directories( ${AKONADI_INCLUDE_DIR} )
 
 LINK_DIRECTORIES (${LIBRARY_OUTPUT_PATH})
 ADD_LIBRARY(akonadi-sharp SHARED ${SRC_CPP})

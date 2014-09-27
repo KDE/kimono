@@ -78,7 +78,7 @@ macro_optional_find_package(KdepimLibs)
 macro_log_feature(KDEPIMLIBS_FOUND "kdepimlibs" "KDE PIM libraries" "http://www.kde.org" FALSE "" "Needed to compile Akonadi bindings")
 
 macro_optional_find_package(Akonadi)
-macro_log_feature(AKONADI_FOUND "Akonadi" "Akonadi libraries" "http://www.kde.org" FALSE "" "Needed to compile Akonadi bindings")
+macro_log_feature(Akonadi_FOUND "Akonadi" "Akonadi libraries" "http://www.kde.org" FALSE "" "Needed to compile Akonadi bindings")
 
 if (NOT CMAKE_CSharp_COMPILER_LOADED)
     return()
